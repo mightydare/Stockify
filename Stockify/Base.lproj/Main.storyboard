@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8ub-fc-5ns">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--My Stocks-->
+        <scene sceneID="32k-Pj-uoj">
+            <objects>
+                <viewController id="RdC-py-D8P" customClass="MyStocksViewController" customModule="Stockify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RY9-Z5-ce7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GOs-XK-BQ9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lGK-n1-XGs"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lGK-n1-XGs" firstAttribute="bottom" secondItem="GOs-XK-BQ9" secondAttribute="bottom" id="N8s-9d-jPA"/>
+                            <constraint firstItem="GOs-XK-BQ9" firstAttribute="leading" secondItem="lGK-n1-XGs" secondAttribute="leading" id="PQr-da-UqY"/>
+                            <constraint firstItem="lGK-n1-XGs" firstAttribute="trailing" secondItem="GOs-XK-BQ9" secondAttribute="trailing" id="lGe-52-K4D"/>
+                            <constraint firstItem="GOs-XK-BQ9" firstAttribute="top" secondItem="lGK-n1-XGs" secondAttribute="top" id="pyk-1Q-T4n"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="My Stocks" id="0ou-ge-PnT"/>
+                    <connections>
+                        <outlet property="tableView" destination="GOs-XK-BQ9" id="mWb-Zf-0Wx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UqG-46-d7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-498" y="172"/>
+        </scene>
+        <!--Stocks-->
+        <scene sceneID="yXY-db-37u">
+            <objects>
+                <viewController title="Stocks" id="0Nx-zu-7H9" customClass="StocksViewController" customModule="Stockify" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zqu-ji-TLp">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-HT-4VJ">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="TM5-yy-brq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="JlM-WE-hAk"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JlM-WE-hAk" firstAttribute="bottom" secondItem="Z1h-HT-4VJ" secondAttribute="bottom" id="FVd-uB-J9R"/>
+                            <constraint firstItem="Z1h-HT-4VJ" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" id="efU-Y3-f7z"/>
+                            <constraint firstItem="Z1h-HT-4VJ" firstAttribute="top" secondItem="JlM-WE-hAk" secondAttribute="top" id="hAr-ji-3Fh"/>
+                            <constraint firstItem="JlM-WE-hAk" firstAttribute="trailing" secondItem="Z1h-HT-4VJ" secondAttribute="trailing" id="i27-eZ-lqe"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Stocks" id="s2f-2G-djy"/>
+                    <connections>
+                        <outlet property="searchBar" destination="TM5-yy-brq" id="t1K-BT-jR0"/>
+                        <outlet property="tableView" destination="Z1h-HT-4VJ" id="jSd-Q9-nSU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mNb-qL-uV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500.00000000000006" y="-435.26785714285711"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Dms-7g-OG8">
+            <objects>
+                <tabBarController id="8ub-fc-5ns" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r2s-Ex-puS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="0Nx-zu-7H9" kind="relationship" relationship="viewControllers" id="o08-NM-quw"/>
+                        <segue destination="RdC-py-D8P" kind="relationship" relationship="viewControllers" id="gB3-V6-Xme"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1of-9i-9eD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1392" y="-131"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

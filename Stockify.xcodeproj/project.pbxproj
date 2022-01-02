@@ -1,0 +1,1002 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5927D1EE27824016000EDB1F /* StockNewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5927D1EC27824016000EDB1F /* StockNewsCell.swift */; };
+		5927D1EF27824016000EDB1F /* StockNewsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5927D1ED27824016000EDB1F /* StockNewsCell.xib */; };
+		5927D1F1278243A2000EDB1F /* StockNewsCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5927D1F0278243A2000EDB1F /* StockNewsCellViewModel.swift */; };
+		593C6E30277C393D000BBB6A /* MyStocksDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 593C6E2E277C393D000BBB6A /* MyStocksDataModel.xcdatamodeld */; };
+		593C6E3F277C3CCA000BBB6A /* MyStocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C6E3E277C3CCA000BBB6A /* MyStocksViewController.swift */; };
+		593C6E41277C3D05000BBB6A /* MyStocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C6E40277C3D05000BBB6A /* MyStocksViewModel.swift */; };
+		593C6E8B277C4416000BBB6A /* StockCore+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C6E89277C4416000BBB6A /* StockCore+CoreDataClass.swift */; };
+		593C6E8C277C4416000BBB6A /* StockCore+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 593C6E8A277C4416000BBB6A /* StockCore+CoreDataProperties.swift */; };
+		594BBA5A27795979004FD589 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA5927795979004FD589 /* AppDelegate.swift */; };
+		594BBA5C27795979004FD589 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA5B27795979004FD589 /* SceneDelegate.swift */; };
+		594BBA5E27795979004FD589 /* StocksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA5D27795979004FD589 /* StocksViewController.swift */; };
+		594BBA6127795979004FD589 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594BBA5F27795979004FD589 /* Main.storyboard */; };
+		594BBA632779597C004FD589 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 594BBA622779597C004FD589 /* Assets.xcassets */; };
+		594BBA662779597C004FD589 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 594BBA642779597C004FD589 /* LaunchScreen.storyboard */; };
+		594BBA712779597D004FD589 /* StockifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA702779597D004FD589 /* StockifyTests.swift */; };
+		594BBA7B2779597D004FD589 /* StockifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA7A2779597D004FD589 /* StockifyUITests.swift */; };
+		594BBA7D2779597D004FD589 /* StockifyUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA7C2779597D004FD589 /* StockifyUITestsLaunchTests.swift */; };
+		594BBA8E27795D4D004FD589 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA8D27795D4D004FD589 /* ApiService.swift */; };
+		594BBA9027795D75004FD589 /* Stock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA8F27795D75004FD589 /* Stock.swift */; };
+		594BBA92277990F8004FD589 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA91277990F8004FD589 /* Constants.swift */; };
+		594BBA942779933D004FD589 /* StockNews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA932779933D004FD589 /* StockNews.swift */; };
+		594BBA962779949C004FD589 /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA952779949C004FD589 /* StocksViewModel.swift */; };
+		594BBA9F27799728004FD589 /* StocksCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBA9D27799728004FD589 /* StocksCell.swift */; };
+		594BBAA027799728004FD589 /* StocksCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 594BBA9E27799728004FD589 /* StocksCell.xib */; };
+		594BBAA427799B4F004FD589 /* StocksCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBAA327799B4F004FD589 /* StocksCellViewModel.swift */; };
+		594BBAA62779A70C004FD589 /* HTTPRequestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 594BBAA52779A70C004FD589 /* HTTPRequestHelper.swift */; };
+		598FC61B27823EAC00DA0B2B /* StockNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FC61A27823EAC00DA0B2B /* StockNewsViewModel.swift */; };
+		59A8380C278209BB00A97215 /* StockNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A8380A278209BB00A97215 /* StockNewsViewController.swift */; };
+		59A8380D278209BB00A97215 /* StockNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59A8380B278209BB00A97215 /* StockNewsViewController.xib */; };
+		8665AFE451DD9CD4EE3DFF91 /* Pods_Stockify_StockifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFFC0943E2667C2DD286657 /* Pods_Stockify_StockifyUITests.framework */; };
+		AA8E81EE1A265A1113F38B6C /* Pods_Stockify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6F8C81E4BC1BC4E9A74430 /* Pods_Stockify.framework */; };
+		E9B77D384AA16674A6B9BF21 /* Pods_StockifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1448CE62795B1E906179BDB4 /* Pods_StockifyTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		594BBA6D2779597D004FD589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 594BBA4E27795979004FD589 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 594BBA5527795979004FD589;
+			remoteInfo = Stockify;
+		};
+		594BBA772779597D004FD589 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 594BBA4E27795979004FD589 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 594BBA5527795979004FD589;
+			remoteInfo = Stockify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1448CE62795B1E906179BDB4 /* Pods_StockifyTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StockifyTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		198AA2F297A7304B870700BB /* Pods-Stockify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockify.release.xcconfig"; path = "Target Support Files/Pods-Stockify/Pods-Stockify.release.xcconfig"; sourceTree = "<group>"; };
+		1BFFC0943E2667C2DD286657 /* Pods_Stockify_StockifyUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockify_StockifyUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5927D1EC27824016000EDB1F /* StockNewsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsCell.swift; sourceTree = "<group>"; };
+		5927D1ED27824016000EDB1F /* StockNewsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockNewsCell.xib; sourceTree = "<group>"; };
+		5927D1F0278243A2000EDB1F /* StockNewsCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsCellViewModel.swift; sourceTree = "<group>"; };
+		593C6E2F277C393D000BBB6A /* MyStocksDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyStocksDataModel.xcdatamodel; sourceTree = "<group>"; };
+		593C6E3E277C3CCA000BBB6A /* MyStocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStocksViewController.swift; sourceTree = "<group>"; };
+		593C6E40277C3D05000BBB6A /* MyStocksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyStocksViewModel.swift; sourceTree = "<group>"; };
+		593C6E89277C4416000BBB6A /* StockCore+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockCore+CoreDataClass.swift"; sourceTree = "<group>"; };
+		593C6E8A277C4416000BBB6A /* StockCore+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StockCore+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		594BBA5627795979004FD589 /* Stockify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stockify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		594BBA5927795979004FD589 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		594BBA5B27795979004FD589 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		594BBA5D27795979004FD589 /* StocksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewController.swift; sourceTree = "<group>"; };
+		594BBA6027795979004FD589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		594BBA622779597C004FD589 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		594BBA652779597C004FD589 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		594BBA672779597C004FD589 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		594BBA6C2779597D004FD589 /* StockifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		594BBA702779597D004FD589 /* StockifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockifyTests.swift; sourceTree = "<group>"; };
+		594BBA762779597D004FD589 /* StockifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StockifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		594BBA7A2779597D004FD589 /* StockifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockifyUITests.swift; sourceTree = "<group>"; };
+		594BBA7C2779597D004FD589 /* StockifyUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockifyUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		594BBA8D27795D4D004FD589 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
+		594BBA8F27795D75004FD589 /* Stock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stock.swift; sourceTree = "<group>"; };
+		594BBA91277990F8004FD589 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		594BBA932779933D004FD589 /* StockNews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNews.swift; sourceTree = "<group>"; };
+		594BBA952779949C004FD589 /* StocksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewModel.swift; sourceTree = "<group>"; };
+		594BBA9D27799728004FD589 /* StocksCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksCell.swift; sourceTree = "<group>"; };
+		594BBA9E27799728004FD589 /* StocksCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StocksCell.xib; sourceTree = "<group>"; };
+		594BBAA327799B4F004FD589 /* StocksCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksCellViewModel.swift; sourceTree = "<group>"; };
+		594BBAA52779A70C004FD589 /* HTTPRequestHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPRequestHelper.swift; sourceTree = "<group>"; };
+		598FC61A27823EAC00DA0B2B /* StockNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsViewModel.swift; sourceTree = "<group>"; };
+		59A8380A278209BB00A97215 /* StockNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsViewController.swift; sourceTree = "<group>"; };
+		59A8380B278209BB00A97215 /* StockNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockNewsViewController.xib; sourceTree = "<group>"; };
+		615D3E1E5BD585B4F56FA53B /* Pods-Stockify-StockifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockify-StockifyUITests.release.xcconfig"; path = "Target Support Files/Pods-Stockify-StockifyUITests/Pods-Stockify-StockifyUITests.release.xcconfig"; sourceTree = "<group>"; };
+		9A6F8C81E4BC1BC4E9A74430 /* Pods_Stockify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A362366BF7222B5EA099D8A5 /* Pods-StockifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockifyTests.debug.xcconfig"; path = "Target Support Files/Pods-StockifyTests/Pods-StockifyTests.debug.xcconfig"; sourceTree = "<group>"; };
+		C0F4C56E0B8D05B4DE4201AD /* Pods-Stockify-StockifyUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockify-StockifyUITests.debug.xcconfig"; path = "Target Support Files/Pods-Stockify-StockifyUITests/Pods-Stockify-StockifyUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E3A560D33B0E777DDEC85C93 /* Pods-Stockify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockify.debug.xcconfig"; path = "Target Support Files/Pods-Stockify/Pods-Stockify.debug.xcconfig"; sourceTree = "<group>"; };
+		EE99AD89A4B132C7B0925943 /* Pods-StockifyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockifyTests.release.xcconfig"; path = "Target Support Files/Pods-StockifyTests/Pods-StockifyTests.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		594BBA5327795979004FD589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA8E81EE1A265A1113F38B6C /* Pods_Stockify.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594BBA692779597D004FD589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E9B77D384AA16674A6B9BF21 /* Pods_StockifyTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594BBA732779597D004FD589 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8665AFE451DD9CD4EE3DFF91 /* Pods_Stockify_StockifyUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5927D1F227824488000EDB1F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA932779933D004FD589 /* StockNews.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5927D1F32782448D000EDB1F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5927D1F5278244AA000EDB1F /* Cell */,
+				59A8380A278209BB00A97215 /* StockNewsViewController.swift */,
+				59A8380B278209BB00A97215 /* StockNewsViewController.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5927D1F427824493000EDB1F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				598FC61A27823EAC00DA0B2B /* StockNewsViewModel.swift */,
+				5927D1F0278243A2000EDB1F /* StockNewsCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5927D1F5278244AA000EDB1F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				5927D1EC27824016000EDB1F /* StockNewsCell.swift */,
+				5927D1ED27824016000EDB1F /* StockNewsCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		593C6E37277C3C37000BBB6A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E38277C3C3E000BBB6A /* Core Data Models */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		593C6E38277C3C3E000BBB6A /* Core Data Models */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E3A277C3C64000BBB6A /* Models */,
+			);
+			path = "Core Data Models";
+			sourceTree = "<group>";
+		};
+		593C6E3A277C3C64000BBB6A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E89277C4416000BBB6A /* StockCore+CoreDataClass.swift */,
+				593C6E8A277C4416000BBB6A /* StockCore+CoreDataProperties.swift */,
+				593C6E2E277C393D000BBB6A /* MyStocksDataModel.xcdatamodeld */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		593C6E3B277C3C84000BBB6A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E40277C3D05000BBB6A /* MyStocksViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		593C6E3C277C3C8A000BBB6A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E3E277C3CCA000BBB6A /* MyStocksViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		594BBA4D27795979004FD589 = {
+			isa = PBXGroup;
+			children = (
+				594BBA5827795979004FD589 /* Stockify */,
+				594BBA6F2779597D004FD589 /* StockifyTests */,
+				594BBA792779597D004FD589 /* StockifyUITests */,
+				594BBA5727795979004FD589 /* Products */,
+				C56831F9ED5660D72005C92A /* Pods */,
+				9C1FF86BF84867B60FC64BE7 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		594BBA5727795979004FD589 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA5627795979004FD589 /* Stockify.app */,
+				594BBA6C2779597D004FD589 /* StockifyTests.xctest */,
+				594BBA762779597D004FD589 /* StockifyUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		594BBA5827795979004FD589 /* Stockify */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E37277C3C37000BBB6A /* CoreData */,
+				594BBA98277996A5004FD589 /* Screens */,
+				594BBA97277994F9004FD589 /* Helpers */,
+				594BBA8C27795B5A004FD589 /* WebService */,
+				594BBA5927795979004FD589 /* AppDelegate.swift */,
+				594BBA5B27795979004FD589 /* SceneDelegate.swift */,
+				594BBA5F27795979004FD589 /* Main.storyboard */,
+				594BBA622779597C004FD589 /* Assets.xcassets */,
+				594BBA642779597C004FD589 /* LaunchScreen.storyboard */,
+				594BBA672779597C004FD589 /* Info.plist */,
+			);
+			path = Stockify;
+			sourceTree = "<group>";
+		};
+		594BBA6F2779597D004FD589 /* StockifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA702779597D004FD589 /* StockifyTests.swift */,
+			);
+			path = StockifyTests;
+			sourceTree = "<group>";
+		};
+		594BBA792779597D004FD589 /* StockifyUITests */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA7A2779597D004FD589 /* StockifyUITests.swift */,
+				594BBA7C2779597D004FD589 /* StockifyUITestsLaunchTests.swift */,
+			);
+			path = StockifyUITests;
+			sourceTree = "<group>";
+		};
+		594BBA8C27795B5A004FD589 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA8D27795D4D004FD589 /* ApiService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		594BBA97277994F9004FD589 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA91277990F8004FD589 /* Constants.swift */,
+				594BBAA52779A70C004FD589 /* HTTPRequestHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		594BBA98277996A5004FD589 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				59A838072782046E00A97215 /* StockNews */,
+				594BBAA2277997AA004FD589 /* MyStocks */,
+				594BBA99277996B2004FD589 /* Stocks */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		594BBA99277996B2004FD589 /* Stocks */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA9C277996FB004FD589 /* ViewModel */,
+				594BBA9B277996F6004FD589 /* View */,
+				594BBA9A277996E9004FD589 /* Model */,
+			);
+			path = Stocks;
+			sourceTree = "<group>";
+		};
+		594BBA9A277996E9004FD589 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA8F27795D75004FD589 /* Stock.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		594BBA9B277996F6004FD589 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				594BBAA12779972F004FD589 /* Cell */,
+				594BBA5D27795979004FD589 /* StocksViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		594BBA9C277996FB004FD589 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA952779949C004FD589 /* StocksViewModel.swift */,
+				594BBAA327799B4F004FD589 /* StocksCellViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		594BBAA12779972F004FD589 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				594BBA9D27799728004FD589 /* StocksCell.swift */,
+				594BBA9E27799728004FD589 /* StocksCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		594BBAA2277997AA004FD589 /* MyStocks */ = {
+			isa = PBXGroup;
+			children = (
+				593C6E3C277C3C8A000BBB6A /* View */,
+				593C6E3B277C3C84000BBB6A /* ViewModel */,
+			);
+			path = MyStocks;
+			sourceTree = "<group>";
+		};
+		59A838072782046E00A97215 /* StockNews */ = {
+			isa = PBXGroup;
+			children = (
+				5927D1F427824493000EDB1F /* ViewModel */,
+				5927D1F32782448D000EDB1F /* View */,
+				5927D1F227824488000EDB1F /* Model */,
+			);
+			path = StockNews;
+			sourceTree = "<group>";
+		};
+		9C1FF86BF84867B60FC64BE7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9A6F8C81E4BC1BC4E9A74430 /* Pods_Stockify.framework */,
+				1BFFC0943E2667C2DD286657 /* Pods_Stockify_StockifyUITests.framework */,
+				1448CE62795B1E906179BDB4 /* Pods_StockifyTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C56831F9ED5660D72005C92A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E3A560D33B0E777DDEC85C93 /* Pods-Stockify.debug.xcconfig */,
+				198AA2F297A7304B870700BB /* Pods-Stockify.release.xcconfig */,
+				C0F4C56E0B8D05B4DE4201AD /* Pods-Stockify-StockifyUITests.debug.xcconfig */,
+				615D3E1E5BD585B4F56FA53B /* Pods-Stockify-StockifyUITests.release.xcconfig */,
+				A362366BF7222B5EA099D8A5 /* Pods-StockifyTests.debug.xcconfig */,
+				EE99AD89A4B132C7B0925943 /* Pods-StockifyTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		594BBA5527795979004FD589 /* Stockify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594BBA802779597D004FD589 /* Build configuration list for PBXNativeTarget "Stockify" */;
+			buildPhases = (
+				A41D0F0CF161A00291E4610A /* [CP] Check Pods Manifest.lock */,
+				594BBA5227795979004FD589 /* Sources */,
+				594BBA5327795979004FD589 /* Frameworks */,
+				594BBA5427795979004FD589 /* Resources */,
+				420542351681214EE52418F6 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Stockify;
+			productName = Stockify;
+			productReference = 594BBA5627795979004FD589 /* Stockify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		594BBA6B2779597D004FD589 /* StockifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594BBA832779597D004FD589 /* Build configuration list for PBXNativeTarget "StockifyTests" */;
+			buildPhases = (
+				14FC09A9BADAD65E2BC70BAB /* [CP] Check Pods Manifest.lock */,
+				594BBA682779597D004FD589 /* Sources */,
+				594BBA692779597D004FD589 /* Frameworks */,
+				594BBA6A2779597D004FD589 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				594BBA6E2779597D004FD589 /* PBXTargetDependency */,
+			);
+			name = StockifyTests;
+			productName = StockifyTests;
+			productReference = 594BBA6C2779597D004FD589 /* StockifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		594BBA752779597D004FD589 /* StockifyUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 594BBA862779597D004FD589 /* Build configuration list for PBXNativeTarget "StockifyUITests" */;
+			buildPhases = (
+				17A0CD03239177F53D32388B /* [CP] Check Pods Manifest.lock */,
+				594BBA722779597D004FD589 /* Sources */,
+				594BBA732779597D004FD589 /* Frameworks */,
+				594BBA742779597D004FD589 /* Resources */,
+				0F9113C0BAAA35D158875601 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				594BBA782779597D004FD589 /* PBXTargetDependency */,
+			);
+			name = StockifyUITests;
+			productName = StockifyUITests;
+			productReference = 594BBA762779597D004FD589 /* StockifyUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		594BBA4E27795979004FD589 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1320;
+				LastUpgradeCheck = 1320;
+				TargetAttributes = {
+					594BBA5527795979004FD589 = {
+						CreatedOnToolsVersion = 13.2.1;
+					};
+					594BBA6B2779597D004FD589 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 594BBA5527795979004FD589;
+					};
+					594BBA752779597D004FD589 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 594BBA5527795979004FD589;
+					};
+				};
+			};
+			buildConfigurationList = 594BBA5127795979004FD589 /* Build configuration list for PBXProject "Stockify" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 594BBA4D27795979004FD589;
+			productRefGroup = 594BBA5727795979004FD589 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				594BBA5527795979004FD589 /* Stockify */,
+				594BBA6B2779597D004FD589 /* StockifyTests */,
+				594BBA752779597D004FD589 /* StockifyUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		594BBA5427795979004FD589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594BBA662779597C004FD589 /* LaunchScreen.storyboard in Resources */,
+				594BBA632779597C004FD589 /* Assets.xcassets in Resources */,
+				594BBAA027799728004FD589 /* StocksCell.xib in Resources */,
+				5927D1EF27824016000EDB1F /* StockNewsCell.xib in Resources */,
+				594BBA6127795979004FD589 /* Main.storyboard in Resources */,
+				59A8380D278209BB00A97215 /* StockNewsViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594BBA6A2779597D004FD589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594BBA742779597D004FD589 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F9113C0BAAA35D158875601 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockify-StockifyUITests/Pods-Stockify-StockifyUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockify-StockifyUITests/Pods-Stockify-StockifyUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stockify-StockifyUITests/Pods-Stockify-StockifyUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		14FC09A9BADAD65E2BC70BAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StockifyTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		17A0CD03239177F53D32388B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockify-StockifyUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		420542351681214EE52418F6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockify/Pods-Stockify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stockify/Pods-Stockify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stockify/Pods-Stockify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A41D0F0CF161A00291E4610A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stockify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		594BBA5227795979004FD589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594BBA5E27795979004FD589 /* StocksViewController.swift in Sources */,
+				5927D1EE27824016000EDB1F /* StockNewsCell.swift in Sources */,
+				594BBAA427799B4F004FD589 /* StocksCellViewModel.swift in Sources */,
+				594BBAA62779A70C004FD589 /* HTTPRequestHelper.swift in Sources */,
+				5927D1F1278243A2000EDB1F /* StockNewsCellViewModel.swift in Sources */,
+				593C6E3F277C3CCA000BBB6A /* MyStocksViewController.swift in Sources */,
+				594BBA5A27795979004FD589 /* AppDelegate.swift in Sources */,
+				594BBA942779933D004FD589 /* StockNews.swift in Sources */,
+				594BBA9F27799728004FD589 /* StocksCell.swift in Sources */,
+				593C6E41277C3D05000BBB6A /* MyStocksViewModel.swift in Sources */,
+				598FC61B27823EAC00DA0B2B /* StockNewsViewModel.swift in Sources */,
+				594BBA962779949C004FD589 /* StocksViewModel.swift in Sources */,
+				593C6E8B277C4416000BBB6A /* StockCore+CoreDataClass.swift in Sources */,
+				593C6E8C277C4416000BBB6A /* StockCore+CoreDataProperties.swift in Sources */,
+				594BBA8E27795D4D004FD589 /* ApiService.swift in Sources */,
+				594BBA9027795D75004FD589 /* Stock.swift in Sources */,
+				59A8380C278209BB00A97215 /* StockNewsViewController.swift in Sources */,
+				594BBA5C27795979004FD589 /* SceneDelegate.swift in Sources */,
+				593C6E30277C393D000BBB6A /* MyStocksDataModel.xcdatamodeld in Sources */,
+				594BBA92277990F8004FD589 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594BBA682779597D004FD589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594BBA712779597D004FD589 /* StockifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		594BBA722779597D004FD589 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				594BBA7D2779597D004FD589 /* StockifyUITestsLaunchTests.swift in Sources */,
+				594BBA7B2779597D004FD589 /* StockifyUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		594BBA6E2779597D004FD589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 594BBA5527795979004FD589 /* Stockify */;
+			targetProxy = 594BBA6D2779597D004FD589 /* PBXContainerItemProxy */;
+		};
+		594BBA782779597D004FD589 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 594BBA5527795979004FD589 /* Stockify */;
+			targetProxy = 594BBA772779597D004FD589 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		594BBA5F27795979004FD589 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				594BBA6027795979004FD589 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		594BBA642779597C004FD589 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				594BBA652779597C004FD589 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		594BBA7E2779597D004FD589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		594BBA7F2779597D004FD589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		594BBA812779597D004FD589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E3A560D33B0E777DDEC85C93 /* Pods-Stockify.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stockify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WolfWare.Stockify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		594BBA822779597D004FD589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 198AA2F297A7304B870700BB /* Pods-Stockify.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Stockify/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WolfWare.Stockify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		594BBA842779597D004FD589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A362366BF7222B5EA099D8A5 /* Pods-StockifyTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WolfWare.StockifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stockify.app/Stockify";
+			};
+			name = Debug;
+		};
+		594BBA852779597D004FD589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE99AD89A4B132C7B0925943 /* Pods-StockifyTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WolfWare.StockifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Stockify.app/Stockify";
+			};
+			name = Release;
+		};
+		594BBA872779597D004FD589 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C0F4C56E0B8D05B4DE4201AD /* Pods-Stockify-StockifyUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WolfWare.StockifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Stockify;
+			};
+			name = Debug;
+		};
+		594BBA882779597D004FD589 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 615D3E1E5BD585B4F56FA53B /* Pods-Stockify-StockifyUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = WolfWare.StockifyUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Stockify;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		594BBA5127795979004FD589 /* Build configuration list for PBXProject "Stockify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594BBA7E2779597D004FD589 /* Debug */,
+				594BBA7F2779597D004FD589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594BBA802779597D004FD589 /* Build configuration list for PBXNativeTarget "Stockify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594BBA812779597D004FD589 /* Debug */,
+				594BBA822779597D004FD589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594BBA832779597D004FD589 /* Build configuration list for PBXNativeTarget "StockifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594BBA842779597D004FD589 /* Debug */,
+				594BBA852779597D004FD589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		594BBA862779597D004FD589 /* Build configuration list for PBXNativeTarget "StockifyUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				594BBA872779597D004FD589 /* Debug */,
+				594BBA882779597D004FD589 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		593C6E2E277C393D000BBB6A /* MyStocksDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				593C6E2F277C393D000BBB6A /* MyStocksDataModel.xcdatamodel */,
+			);
+			currentVersion = 593C6E2F277C393D000BBB6A /* MyStocksDataModel.xcdatamodel */;
+			path = MyStocksDataModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 594BBA4E27795979004FD589 /* Project object */;
+}

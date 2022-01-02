@@ -1,0 +1,6 @@
+framework module Pods_StockifyTests {
+  umbrella header "Pods-StockifyTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
