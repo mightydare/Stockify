@@ -60,7 +60,7 @@ class MyStocksViewModel : NSObject, NSFetchedResultsControllerDelegate {
                     }
                 }
             }
-        guard var stocks = fetchedResultsController.fetchedObjects else { return  }
+        guard var stocks = fetchedResultsController.fetchedObjects else { return }
     }
     
     func createCellModel(stock: Stock) -> StocksCellViewModel {

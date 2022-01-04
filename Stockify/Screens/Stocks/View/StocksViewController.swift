@@ -11,6 +11,7 @@ class StocksViewController: UIViewController {
     
     @IBOutlet var tableView : UITableView!
     @IBOutlet var searchBar : UISearchBar!
+    @IBOutlet var btnSort : UIButton!
     
     lazy var viewModel = {
         StocksViewModel()
@@ -44,6 +45,10 @@ class StocksViewController: UIViewController {
             
         }
     }
+//    @IBAction func sort(_ sender: UIButton) {
+//        viewModel.sort(stocks: Stocks)
+//
+//    }
     
 }
 
@@ -74,7 +79,10 @@ extension StocksViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView:UITableView , didSelectRowAt indexPath:IndexPath) {
-        let cellSelected = tableView.cellForRow(at: indexPath)
+        let cellSelected = tableView.cellForRow(at: indexPath) as? StocksCell
+        let stockNewsVC = StockNewsViewController()
+        stockNewsVC.viewModel.stockSymbol = cellSelected?.symbolLabel.text
+        self.navigationController?.pushViewController(stockNewsVC, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
         
     }

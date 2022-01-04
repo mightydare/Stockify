@@ -9,13 +9,16 @@ import Foundation
 
 
 // MARK: -
+
+
 struct StockNews: Codable {
-    let publishedDate, title , symbol: String
+    let publishedDate : String
+    let title : String
+    let symbol: String
     let image: String
-    let site, text: String
+    let site : String
+    let text: String
     let url: String
 }
 
 typealias SotcksNews = [StockNews]
-
-

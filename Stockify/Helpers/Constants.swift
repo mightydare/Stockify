@@ -34,6 +34,11 @@ struct API {
         static let limit = "100"
     }
     
+    struct Images {
+        static let defaultImage = URL(string: "https://cdn.discountcode.com/img/merchants/114441/360-logo/v2/stockify-discount-codes.png") 
+        
+    }
+    
     
 }
 

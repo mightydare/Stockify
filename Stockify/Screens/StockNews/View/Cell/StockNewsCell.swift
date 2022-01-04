@@ -10,17 +10,21 @@ import SDWebImage
 
 class StockNewsCell: UITableViewCell {
 
-    @IBOutlet var stockTitle : UILabel!
     @IBOutlet var stockImage : UIImageView!
+    @IBOutlet var stockTitle : UILabel!
     
     
     var cellViewModel : StockNewsCellViewModel? {
         didSet {
             stockTitle.text = cellViewModel?.title
-            stockImage.sd_setImage(with: cellViewModel.image)
+            if let cellViewModelImage = cellViewModel?.image {
+                stockImage?.sd_setImage(with: NSURL(string: cellViewModelImage) as URL?)
+            } else {
+                stockImage.sd_setImage(with: API.Images.defaultImage)
+            }
+           
         }
     }
-    
     
     class var identifier: String { return String(describing: self) }
     class var nib: UINib { return UINib(nibName: identifier, bundle: nil) }
@@ -28,7 +32,10 @@ class StockNewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         initView()
+       
     }
+    
+    
     
     
     func initView() {

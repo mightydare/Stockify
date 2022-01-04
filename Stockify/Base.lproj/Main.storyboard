@@ -37,7 +37,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UqG-46-d7K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-498" y="172"/>
+            <point key="canvasLocation" x="411.59420289855075" y="171.42857142857142"/>
         </scene>
         <!--Stocks-->
         <scene sceneID="yXY-db-37u">
@@ -48,7 +48,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-HT-4VJ">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="TM5-yy-brq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -56,25 +56,38 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-sn-Ury">
+                                <rect key="frame" x="274" y="755" width="106" height="46"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sort"/>
+                                <connections>
+                                    <action selector="sort:" destination="0Nx-zu-7H9" eventType="touchUpInside" id="caS-fK-fqn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JlM-WE-hAk"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="top" secondItem="JlM-WE-hAk" secondAttribute="top" constant="667" id="AGT-hu-TD1"/>
                             <constraint firstItem="JlM-WE-hAk" firstAttribute="bottom" secondItem="Z1h-HT-4VJ" secondAttribute="bottom" id="FVd-uB-J9R"/>
+                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" constant="274" id="Tgn-UU-hel"/>
+                            <constraint firstItem="JlM-WE-hAk" firstAttribute="bottom" secondItem="7Lz-sn-Ury" secondAttribute="bottom" constant="12" id="aFh-2b-c5w"/>
                             <constraint firstItem="Z1h-HT-4VJ" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" id="efU-Y3-f7z"/>
                             <constraint firstItem="Z1h-HT-4VJ" firstAttribute="top" secondItem="JlM-WE-hAk" secondAttribute="top" id="hAr-ji-3Fh"/>
                             <constraint firstItem="JlM-WE-hAk" firstAttribute="trailing" secondItem="Z1h-HT-4VJ" secondAttribute="trailing" id="i27-eZ-lqe"/>
+                            <constraint firstItem="JlM-WE-hAk" firstAttribute="trailing" secondItem="7Lz-sn-Ury" secondAttribute="trailing" constant="34" id="kGI-kB-WyG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Stocks" id="s2f-2G-djy"/>
+                    <navigationItem key="navigationItem" id="0wA-V8-SdA"/>
                     <connections>
+                        <outlet property="btnSort" destination="7Lz-sn-Ury" id="ebL-o1-Wga"/>
                         <outlet property="searchBar" destination="TM5-yy-brq" id="t1K-BT-jR0"/>
                         <outlet property="tableView" destination="Z1h-HT-4VJ" id="jSd-Q9-nSU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNb-qL-uV9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-500.00000000000006" y="-435.26785714285711"/>
+            <point key="canvasLocation" x="410.14492753623193" y="-435.26785714285711"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Dms-7g-OG8">
@@ -86,13 +99,32 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="0Nx-zu-7H9" kind="relationship" relationship="viewControllers" id="o08-NM-quw"/>
+                        <segue destination="6Cu-Rj-xi1" kind="relationship" relationship="viewControllers" id="o08-NM-quw"/>
                         <segue destination="RdC-py-D8P" kind="relationship" relationship="viewControllers" id="gB3-V6-Xme"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1of-9i-9eD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1392" y="-131"/>
+        </scene>
+        <!--Stocks-->
+        <scene sceneID="ozc-Rh-HYa">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6Cu-Rj-xi1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Stocks" id="s2f-2G-djy"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="EAe-5O-kY5">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="0Nx-zu-7H9" kind="relationship" relationship="rootViewController" id="hhN-gm-23O"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g8T-Cb-3ZF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-500.00000000000006" y="-435.26785714285711"/>
         </scene>
     </scenes>
     <resources>

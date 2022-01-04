@@ -16,7 +16,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="372" height="100"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fux-fq-uD8">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fux-fq-uD8">
                         <rect key="frame" x="256" y="0.0" width="116" height="34"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="116" id="xhv-Kh-UO6"/>
@@ -40,8 +40,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-CU-FmG">
-                        <rect key="frame" x="252" y="58" width="120" height="31"/>
+                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LlG-CU-FmG">
+                        <rect key="frame" x="252" y="42" width="120" height="47"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="C6V-v4-Us9"/>
                         </constraints>
@@ -49,6 +49,7 @@
                         <buttonConfiguration key="configuration" style="plain" title="Add to MyList"/>
                     </button>
                 </subviews>
+                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstItem="LlG-CU-FmG" firstAttribute="trailing" secondItem="fux-fq-uD8" secondAttribute="trailing" id="1pb-gW-AJ5"/>
                     <constraint firstItem="2qI-wg-fxS" firstAttribute="top" secondItem="Gio-1K-RdJ" secondAttribute="bottom" constant="8" id="GrI-cn-0g0"/>

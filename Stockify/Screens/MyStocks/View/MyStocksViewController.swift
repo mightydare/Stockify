@@ -78,6 +78,10 @@ extension MyStocksViewController: UITableViewDataSource {
     }
 }
 
-extension  MyStocksViewController : NSFetchedResultsControllerDelegate {}
+extension  MyStocksViewController : NSFetchedResultsControllerDelegate {
+    
+    
+    
+}
 
 

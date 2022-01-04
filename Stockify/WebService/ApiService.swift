@@ -9,7 +9,7 @@ import Foundation
 
 protocol StocksServicesProtocol {
     func getStocks(completion: @escaping (_ success: Bool, _ results: Stocks?, _ error: String?) -> ())
-    func getNewsForStock(_ stockSymbol : String ,completion: @escaping (_ success: Bool, _ results: StockNews?, _ error: String?) -> ())
+    func getStockNews(_ stockSymbol : String ,completion: @escaping (_ success: Bool, _ results: SotcksNews?, _ error: String?) -> ())
 }
 
 
@@ -47,7 +47,7 @@ class ApiService : StocksServicesProtocol {
         }
     }
     
-    func getNewsForStock( _ stockSymbol : String , completion: @escaping (Bool, StockNews?, String?) -> ()) {
+    func getStockNews( _ stockSymbol : String , completion: @escaping (Bool, SotcksNews?, String?) -> ()) {
         let params = [API.ParametarKeys.tickers : stockSymbol,
                       API.ParametarKeys.limit : "1000",
                       API.ParametarKeys.apiKey : API.Parametars.apiKey
@@ -59,7 +59,7 @@ class ApiService : StocksServicesProtocol {
             if success {
                 do {
                     let decoder = JSONDecoder()
-                    let model = try decoder.decode(StockNews.self, from: data!)
+                    let model = try decoder.decode(SotcksNews.self, from: data!)
                     DispatchQueue.main.async {
                         completion(true , model , nil)
                     }

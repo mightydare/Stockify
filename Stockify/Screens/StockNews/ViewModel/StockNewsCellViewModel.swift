@@ -9,6 +9,6 @@ import Foundation
 
 
 struct StockNewsCellViewModel {
-    var title : String
-    var image : String
+    var title : String?
+    var image : String?
 }

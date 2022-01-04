@@ -73,14 +73,17 @@ class StocksViewModel : NSObject {
            return StocksCellViewModel(symbol: symbol, companyName: companyName, price: price)
        }
     
+    func sort(stocks : Stocks) {
+        self.stocks = stocks.sorted { $0.companyName.lowercased() < $1.companyName.lowercased() }
+        reloadTableView?()
+    }
+    
     func getCellViewModel(at indexPath: IndexPath) -> StocksCellViewModel {
             return stockCellViewModel[indexPath.row]
         }
     
     func filterStocks (_ searchText : String) {
         
-        //finish this 
-
         if searchText.isEmpty == false {
             filteredStocks = stocks.filter({ stock in
                 stock.companyName.lowercased().contains(searchText.lowercased()) })
