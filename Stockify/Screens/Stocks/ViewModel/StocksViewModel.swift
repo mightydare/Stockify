@@ -69,12 +69,30 @@ class StocksViewModel : NSObject {
            let symbol = stock.symbol
            let companyName = stock.companyName
            let price = "$ \(stock.price)"
+           let marketCap = stock.marketCap
+           let country = stock.country
            
-           return StocksCellViewModel(symbol: symbol, companyName: companyName, price: price)
+        return StocksCellViewModel(symbol: symbol, companyName: companyName, price: price, marketCap: marketCap)
        }
     
-    func sort(stocks : Stocks) {
-       let sortedStocks = stocks.sorted { $0.symbol < $1.symbol}
+    func sort(stocks : Stocks , filterType : String? = nil , filterCountry : [String]? = nil) {
+        var sortedStocks = Stocks()
+        if filterType == "Alphabetical" {
+             sortedStocks = stocks.sorted { $0.symbol < $1.symbol}
+        } else if filterType == "Market" {
+             sortedStocks = stocks.sorted { $0.marketCap < $1.marketCap}
+        }
+        else if filterCountry != nil {
+            var countryFilteredStocks = Stocks()
+            filterCountry?.forEach({ countryFilter in
+                stocks.forEach { stockCountry in
+                    if stockCountry.country.contains(countryFilter) {
+                        countryFilteredStocks.append(stockCountry)
+                    }
+                }
+            })
+            sortedStocks = countryFilteredStocks
+        }
         self.stocks = sortedStocks
         var vms = [StocksCellViewModel]()
         for stock in stocks {
@@ -100,10 +118,11 @@ class StocksViewModel : NSObject {
         for stock in stocks {
             vms.append(createCellModel(stock: stock))
         }
-         stockCellViewModel = vms
+        stockCellViewModel = vms
         reloadTableView?()
         
     }
+    
     
     func deleteCellAt(_ indexPath: IndexPath , _ editingStyle : UITableViewCell.EditingStyle , tableView : UITableView) {
         if editingStyle == .delete {

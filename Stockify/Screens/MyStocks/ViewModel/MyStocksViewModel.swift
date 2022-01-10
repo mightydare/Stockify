@@ -60,28 +60,43 @@ class MyStocksViewModel : NSObject, NSFetchedResultsControllerDelegate {
                     }
                 }
             }
-        guard var stocks = fetchedResultsController.fetchedObjects else { return }
+        guard var coreStocks = fetchedResultsController.fetchedObjects else { return }
+//        stocks.forEach { stock in
+//            let listItemList = coreStocks.flatMap({Stock(})
+//            stocks.append(listItemList)
+//        }
+        
+        self.fetchData(stocks: stocks)
     }
+    
+    func fetchData(stocks: Stocks) {
+           self.stocks = stocks // Cache
+           var vms = [StocksCellViewModel]()
+           for stock in stocks {
+               vms.append(createCellModel(stock: stock))
+           }
+            stockCellViewModel = vms
+       }
     
     func createCellModel(stock: Stock) -> StocksCellViewModel {
            let symbol = stock.symbol
            let companyName = stock.companyName
            let price = "$ \(stock.price)"
-           
-           return StocksCellViewModel(symbol: symbol, companyName: companyName, price: price)
+        let marketCap = stock.marketCap
+        return StocksCellViewModel(symbol: symbol, companyName: companyName, price: price, marketCap: marketCap)
        }
     
     func getCellViewModel(at indexPath: IndexPath) -> StocksCellViewModel {
             return stockCellViewModel[indexPath.row]
         }
     
-    func deleteCellAt(_ indexPath: IndexPath , _ editingStyle : UITableViewCell.EditingStyle , tableView : UITableView) {
-        if editingStyle == .delete {
-            let commit = stocks[indexPath.row]
-            stocks.remove(at: indexPath.row)
-            tableView.deleteRows(at: [indexPath], with: .fade)
-
-        }
-    }
+//    func deleteCellAt(_ indexPath: IndexPath , _ editingStyle : UITableViewCell.EditingStyle , tableView : UITableView) {
+//        if editingStyle == .delete {
+//            let commit = stocks[indexPath.row]
+//            stocks.remove(at: indexPath.row)
+//            tableView.deleteRows(at: [indexPath], with: .fade)
+//
+//        }
+//    }
     
 }

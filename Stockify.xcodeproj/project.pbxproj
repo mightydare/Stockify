@@ -37,6 +37,7 @@
 		598FC61B27823EAC00DA0B2B /* StockNewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598FC61A27823EAC00DA0B2B /* StockNewsViewModel.swift */; };
 		59A8380C278209BB00A97215 /* StockNewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A8380A278209BB00A97215 /* StockNewsViewController.swift */; };
 		59A8380D278209BB00A97215 /* StockNewsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 59A8380B278209BB00A97215 /* StockNewsViewController.xib */; };
+		59E9F901278CB3FF00132273 /* MultiPickerDialog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E9F900278CB3FF00132273 /* MultiPickerDialog.swift */; };
 		8665AFE451DD9CD4EE3DFF91 /* Pods_Stockify_StockifyUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BFFC0943E2667C2DD286657 /* Pods_Stockify_StockifyUITests.framework */; };
 		AA8E81EE1A265A1113F38B6C /* Pods_Stockify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A6F8C81E4BC1BC4E9A74430 /* Pods_Stockify.framework */; };
 		E9B77D384AA16674A6B9BF21 /* Pods_StockifyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1448CE62795B1E906179BDB4 /* Pods_StockifyTests.framework */; };
@@ -97,6 +98,7 @@
 		598FC61A27823EAC00DA0B2B /* StockNewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsViewModel.swift; sourceTree = "<group>"; };
 		59A8380A278209BB00A97215 /* StockNewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockNewsViewController.swift; sourceTree = "<group>"; };
 		59A8380B278209BB00A97215 /* StockNewsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StockNewsViewController.xib; sourceTree = "<group>"; };
+		59E9F900278CB3FF00132273 /* MultiPickerDialog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiPickerDialog.swift; sourceTree = "<group>"; };
 		615D3E1E5BD585B4F56FA53B /* Pods-Stockify-StockifyUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stockify-StockifyUITests.release.xcconfig"; path = "Target Support Files/Pods-Stockify-StockifyUITests/Pods-Stockify-StockifyUITests.release.xcconfig"; sourceTree = "<group>"; };
 		9A6F8C81E4BC1BC4E9A74430 /* Pods_Stockify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stockify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A362366BF7222B5EA099D8A5 /* Pods-StockifyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StockifyTests.debug.xcconfig"; path = "Target Support Files/Pods-StockifyTests/Pods-StockifyTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		594BBA5827795979004FD589 /* Stockify */ = {
 			isa = PBXGroup;
 			children = (
+				59E9F8FF278CB3EB00132273 /* External */,
 				593C6E37277C3C37000BBB6A /* CoreData */,
 				594BBA98277996A5004FD589 /* Screens */,
 				594BBA97277994F9004FD589 /* Helpers */,
@@ -365,6 +368,14 @@
 				5927D1F227824488000EDB1F /* Model */,
 			);
 			path = StockNews;
+			sourceTree = "<group>";
+		};
+		59E9F8FF278CB3EB00132273 /* External */ = {
+			isa = PBXGroup;
+			children = (
+				59E9F900278CB3FF00132273 /* MultiPickerDialog.swift */,
+			);
+			path = External;
 			sourceTree = "<group>";
 		};
 		9C1FF86BF84867B60FC64BE7 /* Frameworks */ = {
@@ -647,6 +658,7 @@
 				594BBA962779949C004FD589 /* StocksViewModel.swift in Sources */,
 				593C6E8B277C4416000BBB6A /* StockCore+CoreDataClass.swift in Sources */,
 				593C6E8C277C4416000BBB6A /* StockCore+CoreDataProperties.swift in Sources */,
+				59E9F901278CB3FF00132273 /* MultiPickerDialog.swift in Sources */,
 				594BBA8E27795D4D004FD589 /* ApiService.swift in Sources */,
 				594BBA9027795D75004FD589 /* Stock.swift in Sources */,
 				59A8380C278209BB00A97215 /* StockNewsViewController.swift in Sources */,

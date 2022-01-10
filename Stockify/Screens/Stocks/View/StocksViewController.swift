@@ -46,10 +46,55 @@ class StocksViewController: UIViewController {
         }
     }
     @IBAction func sort(_ sender: UIButton) {
-        viewModel.sort(stocks: viewModel.stocks)
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
+        var filterType = ""
+        var pickerData : [[String:String]] = []
+        var selectedIds : [String] = []
+        viewModel.stocks.forEach { stock in
+                let pickerDataDic = [
+                    "value" : stock.country ,
+                    "display" : stock.country]
+            if !pickerData.contains(pickerDataDic) {
+                pickerData.append(pickerDataDic)
+                }
+            }
+        
+        let alert = UIAlertController(title: "Filtering", message: "How should we filter ? ", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "Alphabetical", style: UIAlertAction.Style.default, handler: {
+            action in
+            filterType = "Alphabetical"
+            self.viewModel.sort(stocks: self.viewModel.stocks , filterType : filterType)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Market", style: UIAlertAction.Style.default, handler: {
+            action in
+            filterType = "Market"
+            self.viewModel.sort(stocks: self.viewModel.stocks , filterType : filterType)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }))
+        alert.addAction(UIAlertAction(title: "Country", style: UIAlertAction.Style.default, handler: {_ in
+            MultiPickerDialog().show(title: "Neshto", doneButtonTitle: "Done", cancelButtonTitle: "Cancle", options: pickerData, selected: selectedIds, callback: {
+                values in
+                var selectedValues = [String]()
+//                print("callback \(values)")
+                for (value) in values {
+                    selectedValues.append(value["value"]!)
+                }
+                selectedIds.removeAll()
+                print(selectedValues)
+                self.viewModel.sort(stocks: self.viewModel.stocks , filterCountry : selectedValues)
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            })
+        }))
+        
+        alert.addAction(UIAlertAction(title: "Cancle", style: UIAlertAction.Style.destructive, handler: nil))
+        self.navigationController?.present(alert, animated: true, completion: nil)
+        
     }
     
 }

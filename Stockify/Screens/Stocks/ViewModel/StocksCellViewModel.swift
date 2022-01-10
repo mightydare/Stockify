@@ -12,4 +12,6 @@ struct StocksCellViewModel {
     var symbol : String
     var companyName : String
     var price : String
+    var marketCap : Int
+    var country : String?
 }

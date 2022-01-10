@@ -73,9 +73,9 @@ extension MyStocksViewController: UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        viewModel.deleteCellAt(indexPath , editingStyle, tableView: tableView)
-    }
+//    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        viewModel.deleteCellAt(indexPath , editingStyle, tableView: tableView)
+//    }
 }
 
 extension  MyStocksViewController : NSFetchedResultsControllerDelegate {
