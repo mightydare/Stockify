@@ -49,7 +49,7 @@ class StockNewsCell: UITableViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         stockTitle.text = nil
-        stockImage = nil
+        stockImage.sd_cancelCurrentImageLoad()
         
     }
     

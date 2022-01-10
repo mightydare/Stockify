@@ -80,7 +80,7 @@ class StocksViewController: UIViewController {
             MultiPickerDialog().show(title: "Pick countries to filter", doneButtonTitle: "Done", cancelButtonTitle: "Cancle", options: pickerData, selected: selectedIds, callback: {
                 values in
                 var selectedValues = [String]()
-//                print("callback \(values)")
+                print("callback \(values)")
                 for (value) in values {
                     selectedValues.append(value["value"]!)
                 }
