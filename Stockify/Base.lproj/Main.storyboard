@@ -47,9 +47,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-HT-4VJ">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Z1h-HT-4VJ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <searchBar key="tableHeaderView" contentMode="redraw" id="TM5-yy-brq">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
@@ -73,7 +72,11 @@
                         <viewLayoutGuide key="safeArea" id="JlM-WE-hAk"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Z1h-HT-4VJ" firstAttribute="bottom" secondItem="JlM-WE-hAk" secondAttribute="bottom" id="0Cg-oT-ajX"/>
+                            <constraint firstItem="Z1h-HT-4VJ" firstAttribute="trailing" secondItem="JlM-WE-hAk" secondAttribute="trailing" id="GJB-5F-OzV"/>
                             <constraint firstItem="7Lz-sn-Ury" firstAttribute="bottom" secondItem="JlM-WE-hAk" secondAttribute="bottom" id="Gh7-v5-BzJ"/>
+                            <constraint firstItem="Z1h-HT-4VJ" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" id="GzI-1g-jeV"/>
+                            <constraint firstItem="Z1h-HT-4VJ" firstAttribute="top" secondItem="JlM-WE-hAk" secondAttribute="top" id="NAP-kO-9mm"/>
                             <constraint firstItem="JlM-WE-hAk" firstAttribute="trailing" secondItem="7Lz-sn-Ury" secondAttribute="trailing" constant="154" id="qfw-ao-LI5"/>
                             <constraint firstItem="7Lz-sn-Ury" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" constant="154" id="t7H-Lw-Og1"/>
                         </constraints>
