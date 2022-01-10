@@ -95,7 +95,7 @@ class StocksViewModel : NSObject {
         }
         self.stocks = sortedStocks
         var vms = [StocksCellViewModel]()
-        for stock in stocks {
+        for stock in self.stocks {
             vms.append(createCellModel(stock: stock))
         }
         stockCellViewModel = vms

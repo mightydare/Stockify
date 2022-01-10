@@ -121,11 +121,7 @@ extension StocksViewController: UITableViewDelegate {
 
 extension StocksViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if viewModel.filteredStocks.count != 0 {
-            return viewModel.filteredStocks.count
-        } else {
             return viewModel.stocks.count
-        }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
