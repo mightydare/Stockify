@@ -74,8 +74,15 @@ class StocksViewModel : NSObject {
        }
     
     func sort(stocks : Stocks) {
-        self.stocks = stocks.sorted { $0.companyName.lowercased() < $1.companyName.lowercased() }
-        reloadTableView?()
+       let sortedStocks = stocks.sorted { $0.symbol < $1.symbol}
+        self.stocks = sortedStocks
+        var vms = [StocksCellViewModel]()
+        for stock in stocks {
+            vms.append(createCellModel(stock: stock))
+        }
+        stockCellViewModel = vms
+        self.reloadTableView?()
+ 
     }
     
     func getCellViewModel(at indexPath: IndexPath) -> StocksCellViewModel {
@@ -88,7 +95,12 @@ class StocksViewModel : NSObject {
             filteredStocks = stocks.filter({ stock in
                 stock.companyName.lowercased().contains(searchText.lowercased()) })
         }
-
+        stocks = filteredStocks
+        var vms = [StocksCellViewModel]()
+        for stock in stocks {
+            vms.append(createCellModel(stock: stock))
+        }
+         stockCellViewModel = vms
         reloadTableView?()
         
     }

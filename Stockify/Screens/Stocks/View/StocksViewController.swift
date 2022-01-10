@@ -45,10 +45,12 @@ class StocksViewController: UIViewController {
             
         }
     }
-//    @IBAction func sort(_ sender: UIButton) {
-//        viewModel.sort(stocks: Stocks)
-//
-//    }
+    @IBAction func sort(_ sender: UIButton) {
+        viewModel.sort(stocks: viewModel.stocks)
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+    }
     
 }
 
