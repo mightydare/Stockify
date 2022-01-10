@@ -12,6 +12,7 @@ class StocksViewController: UIViewController {
     @IBOutlet var tableView : UITableView!
     @IBOutlet var searchBar : UISearchBar!
     @IBOutlet var btnSort : UIButton!
+    @IBOutlet var btnRestt : UIButton!
     
     lazy var viewModel = {
         StocksViewModel()
@@ -76,7 +77,7 @@ class StocksViewController: UIViewController {
             }
         }))
         alert.addAction(UIAlertAction(title: "Country", style: UIAlertAction.Style.default, handler: {_ in
-            MultiPickerDialog().show(title: "Neshto", doneButtonTitle: "Done", cancelButtonTitle: "Cancle", options: pickerData, selected: selectedIds, callback: {
+            MultiPickerDialog().show(title: "Pick countries to filter", doneButtonTitle: "Done", cancelButtonTitle: "Cancle", options: pickerData, selected: selectedIds, callback: {
                 values in
                 var selectedValues = [String]()
 //                print("callback \(values)")
@@ -97,6 +98,16 @@ class StocksViewController: UIViewController {
         
     }
     
+    
+    @IBAction func reset (_ sender: UIButton) {
+        viewModel.getStocks()
+        viewModel.reloadTableView = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
+            
+        }
+    }
 }
 
 

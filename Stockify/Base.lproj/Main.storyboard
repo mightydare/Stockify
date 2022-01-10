@@ -56,11 +56,10 @@
                                     <textInputTraits key="textInputTraits"/>
                                 </searchBar>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-sn-Ury">
-                                <rect key="frame" x="154" y="752" width="106" height="61"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Lz-sn-Ury">
+                                <rect key="frame" x="84" y="752" width="106" height="61"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="61" id="0sh-cg-a2h"/>
-                                    <constraint firstAttribute="width" constant="106" id="Ywp-4G-ETw"/>
+                                    <constraint firstAttribute="width" constant="106" id="zJq-Cy-OVO"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Sort"/>
@@ -68,21 +67,32 @@
                                     <action selector="sort:" destination="0Nx-zu-7H9" eventType="touchUpInside" id="caS-fK-fqn"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-65-l0Z">
+                                <rect key="frame" x="219" y="756" width="114" height="53"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Rest"/>
+                                <connections>
+                                    <action selector="reset:" destination="0Nx-zu-7H9" eventType="touchUpInside" id="naa-Nb-Rx5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JlM-WE-hAk"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Z1h-HT-4VJ" firstAttribute="bottom" secondItem="JlM-WE-hAk" secondAttribute="bottom" id="0Cg-oT-ajX"/>
+                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="bottom" secondItem="JlM-WE-hAk" secondAttribute="bottom" id="802-Op-g13"/>
+                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" constant="84" id="DUC-HK-itK"/>
                             <constraint firstItem="Z1h-HT-4VJ" firstAttribute="trailing" secondItem="JlM-WE-hAk" secondAttribute="trailing" id="GJB-5F-OzV"/>
-                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="bottom" secondItem="JlM-WE-hAk" secondAttribute="bottom" id="Gh7-v5-BzJ"/>
                             <constraint firstItem="Z1h-HT-4VJ" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" id="GzI-1g-jeV"/>
                             <constraint firstItem="Z1h-HT-4VJ" firstAttribute="top" secondItem="JlM-WE-hAk" secondAttribute="top" id="NAP-kO-9mm"/>
-                            <constraint firstItem="JlM-WE-hAk" firstAttribute="trailing" secondItem="7Lz-sn-Ury" secondAttribute="trailing" constant="154" id="qfw-ao-LI5"/>
-                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="leading" secondItem="JlM-WE-hAk" secondAttribute="leading" constant="154" id="t7H-Lw-Og1"/>
+                            <constraint firstItem="JlM-WE-hAk" firstAttribute="trailing" secondItem="ge6-65-l0Z" secondAttribute="trailing" constant="81" id="O5G-OV-P8e"/>
+                            <constraint firstItem="ge6-65-l0Z" firstAttribute="leading" secondItem="7Lz-sn-Ury" secondAttribute="trailing" constant="29" id="hFV-B8-5Gq"/>
+                            <constraint firstItem="7Lz-sn-Ury" firstAttribute="baseline" secondItem="ge6-65-l0Z" secondAttribute="baseline" id="vzi-Qa-lWa"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="0wA-V8-SdA"/>
                     <connections>
+                        <outlet property="btnRestt" destination="ge6-65-l0Z" id="kWU-1D-XKu"/>
                         <outlet property="btnSort" destination="7Lz-sn-Ury" id="ebL-o1-Wga"/>
                         <outlet property="searchBar" destination="TM5-yy-brq" id="t1K-BT-jR0"/>
                         <outlet property="tableView" destination="Z1h-HT-4VJ" id="jSd-Q9-nSU"/>
